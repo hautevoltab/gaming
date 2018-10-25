@@ -1,14 +1,14 @@
 function love.load()
-x = 0   
+x = 0
+y = 0
 end
- function love.update(dt
- )
-end 
-function love.draw()
-    love.graphics.print("Hello World", x, 300)
-    
-for i=1,200 do
-    love.graphics.print("Hello World", x, i)
+function love.update(dt)
+    if love.keyboard.isDown('right') then
+        x=x+10
+    end  
+
 
 end
-end                     
+function love.draw()
+love.graphics.rectangle('fill',x,123,123,123)
+end
