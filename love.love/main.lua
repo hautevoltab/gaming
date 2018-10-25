@@ -10,7 +10,6 @@ function love.update(dt)
     elseif love.keyboard.isDown('left') then
         x=x-10
     end  
-
     if love.keyboard.isDown('down') then
         y=y+10
     elseif love.keyboard.isDown('up') then
@@ -19,5 +18,6 @@ function love.update(dt)
 end
 -- the love.draw is for render the thing in to the windows 
 function love.draw()
-love.graphics.rectangle('fill',x,y,123,123)
+    love.graphics.setColor(0,255,255)
+    love.graphics.rectangle('fill',x,y,123,123)
 end
