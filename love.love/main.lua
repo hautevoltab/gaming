@@ -1,27 +1,15 @@
+WINDOW_WIDTH = 1280
+
+WINDOW_HEIGHT = 720
 -- the love.load is for initialised the variable 
 function love.load()
-love.window.setMode(500,500)
-    x = 0
-y = 400
+love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT, {
+    fullscreen = false,
+    resizable = true,
+    vsync = true 
+})
 end
--- the love.update is for use the input of the keyboard 
-function love.update(dt)
--- love.keyboard use for change the direction of the pad
-    if love.keyboard.isDown('right') then
-        x=x+10
-    elseif love.keyboard.isDown('left') then
-        x=x-10
-    end  
-    if love.keyboard.isDown('down') then
-        y=y+10
-    elseif love.keyboard.isDown('up') then
-        y=y-10
-    end  
-end
--- the love.draw is for render the thing in to the windows 
-function love.draw()
-    love.graphics.printf('yeahman',x,y,102,ALIGNMODE)
-    love.graphics.setColor(250,25,255)
-    love.graphics.rectangle('fill',x,y,12,100)
 
-end
+function love.draw()
+    love.graphics.printf('hello',2,WINDOW_HEIGHT/2 - 6,WINDOW_WIDTH, 'center')
+end 
