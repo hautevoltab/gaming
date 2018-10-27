@@ -9,7 +9,14 @@ love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT, {
     vsync = true 
 })
 end
-
+function love.update() 
+function love.keypressed(key)
+  if key == 'space' then 
+    love.event.quit()
+end 
+end
+end
+-- love.draw drawing the gae sketch 
 function love.draw()
     love.graphics.printf('hello',2,WINDOW_HEIGHT/2 - 6,WINDOW_WIDTH, 'center')
 end 
