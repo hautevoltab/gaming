@@ -20,6 +20,8 @@ function love.update(dt)
 end
 -- the love.draw is for render the thing in to the windows 
 function love.draw()
-    love.graphics.setColor(0,255,255)
+    love.graphics.printf('yeahman',x,y,102,ALIGNMODE)
+    love.graphics.setColor(250,25,255)
     love.graphics.rectangle('fill',x,y,12,100)
+
 end
